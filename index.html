@@ -11,7 +11,7 @@
             MyText.onblur = function(){
                 for(var i = 0; i<MyText.value.length; i++){
                     var fn = "https://js-tool.github.io/fonts/" + MyText.value.charAt(i) + ".jpg";
-                    var code = "<img href = '" + fn + "'>"
+                    var code = "<img src = '" + fn + "'>"
                     document.write(code);
                 }
             }
