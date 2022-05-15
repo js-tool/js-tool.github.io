@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>AI手写体生成器</title>
+    </head>
+    <body>
+        <input type="text" id="MyText"></input>
+        </br>
+        <script type="text/javascript">
+            var MyText = document.getElementById("MyText");
+            MyText.onblur = function(){
+                for(var i = 0; i<MyText.value.length; i++){
+                    var fn = "https://js-tool.github.io/font/" + MyText.value.charAt(i) + ".jpg";
+                    var code = "<img href = '" + fn + "'>"
+                    document.write(code);
+                }
+            }
+        </script>
+    </body>
+</html>
