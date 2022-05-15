@@ -10,7 +10,7 @@
             var MyText = document.getElementById("MyText");
             MyText.onblur = function(){
                 for(var i = 0; i<MyText.value.length; i++){
-                    var fn = "https://js-tool.github.io/font/" + MyText.value.charAt(i) + ".jpg";
+                    var fn = "https://js-tool.github.io/fonts/" + MyText.value.charAt(i) + ".jpg";
                     var code = "<img href = '" + fn + "'>"
                     document.write(code);
                 }
