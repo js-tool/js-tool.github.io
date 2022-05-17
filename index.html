@@ -7,14 +7,18 @@
         <input type="text" id="MyText"></input>
         </br>
         <script type="text/javascript">
+            function imgerr(){
+                var img = event.srcElement;
+                img.src = "https://js-tool.github.io/fonts/notfind.jpg";
+            }
             var MyText = document.getElementById("MyText");
             MyText.onblur = function(){
                 for(var i = 0; i<MyText.value.length; i++){
                     var fn = "https://js-tool.github.io/fonts/" + MyText.value.charAt(i) + ".jpg";
-                    var code = "<img src = '" + fn + "'>"
+                    var code = "<img src = '" + fn + "' onerror='imgerr();'>";
                     document.write(code);
                 }
-                document.write("<br\><input type='button' onclick='location.replace(location.href)' style='width:100px;height:60px'>返回</button>");
+                document.write("<br/><input type='button' onclick='location.replace(location.href)' style='width:100px;height:60px' value='返回'/>");
             }
         </script>
     </body>
